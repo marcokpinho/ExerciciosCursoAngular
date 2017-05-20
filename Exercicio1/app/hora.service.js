@@ -2,11 +2,10 @@
   var Class = ng.core.Class;
 
   app.HoraAtualService = Class({
-    constructor: function HoraAtualService() {
-      this.data = new Date();
-    },
+    constructor: function HoraAtualService() {},
     getHora: function() {
-      return this.data.getHours().toString().concat(":",this.data.getMinutes().toString());
+      this.data = new Date();
+      return this.data.getHours().toString().concat(":",this.data.getMinutes().toString(),":",this.data.getSeconds().toString());
     },
     generateHora: function(delay, callback) {
       var self = this;
@@ -16,7 +15,5 @@
       }, delay);
     }
   });  
-
-  var data = new Date(); 
 
 })(window.app || (window.app = {}));
