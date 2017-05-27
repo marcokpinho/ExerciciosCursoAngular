@@ -5,10 +5,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   template: `
     <div class="panel panel-primary">
       <div class="panel-body">
-        <input type="text" [(ngModel)]="contato.title"
-          placeholder="Title" style="width: 25%;">
-        <input type="text" [(ngModel)]="contato.url"
-          placeholder="URL" style="width: 50%;">
+        <input type="text" [(ngModel)]="contato.nome"
+          placeholder="Nome" style="width: 25%;">
+        <input type="text" [(ngModel)]="contato.telefone"
+          placeholder="Telefones" style="width: 50%;">
         <button (click)="onSave()" class="btn btn-primary">
           <span class="glyphicon glyphicon-ok"></span>
           <span class="hidden-xs">Save</span>

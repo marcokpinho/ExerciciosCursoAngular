@@ -32,8 +32,8 @@ export class ContatoService {
 
   updateContato(contato) {
     const json = JSON.stringify({
-      title: contato.title,
-      url: contato.url
+      nome: contato.nome,
+      telefone: contato.telefone
     });
     return this.http.patch(`${this.baseUrl}/${this.collection}/${contato.id}.json`, json)
       .toPromise()
@@ -44,10 +44,10 @@ export class ContatoService {
     return Object.keys(parsedResponse)
       .map(id => ({
         id: id,
-        title: parsedResponse[id].title,
-        url: parsedResponse[id].url
+        nome: parsedResponse[id].nome,
+        telefone: parsedResponse[id].telefone
       }))
-      .sort((a, b) => a.title.localeCompare(b.title));
+      .sort((a, b) => a.nome.localeCompare(b.nome));
   }
 
 }

@@ -7,9 +7,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       <table class="table table-striped">
         <tr *ngFor="let contato of contatos">
           <td>
-            <a [href]="contato.url" target="_blank">{{contato.title}}</a>
+            <a [href]="contato.telefone" target="_blank">{{contato.nome}}</a>
           </td>
-          <td class="hidden-xs hidden-sm">{{contato.url}}</td>
+          <td class="hidden-xs hidden-sm">{{contato.telefone}}</td>
           <td>
             <button (click)="onEdit(contato)" class="btn btn-primary">
               <span class="glyphicon glyphicon-pencil"></span>
