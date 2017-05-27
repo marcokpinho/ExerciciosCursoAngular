@@ -4,7 +4,7 @@
   app.AppComponent = Component({
     selector: 'my-app',
     template:
-      '<h1>Hora Atual</h1>' +
+      '<h3>Hora Atual</h3>' +
       '<hora-atual></hora-atual>'
   })
   .Class({
