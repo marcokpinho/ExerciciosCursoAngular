@@ -6,7 +6,7 @@ import { Http, Headers, Response } from '@angular/http';
 export class CursoService extends SuperService{
 
   constructor( http: Http) {
-    super('categoria',http);
+    super('curso',http);
    }
 
   filtra(filtro):Promise<any> {

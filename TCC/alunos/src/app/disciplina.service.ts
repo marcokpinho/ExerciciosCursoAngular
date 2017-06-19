@@ -6,7 +6,7 @@ import { Http, Headers, Response } from '@angular/http';
 export class DisciplinaService extends SuperService{
 
   constructor( http: Http) {
-    super('pedido',http);
+    super('disciplina',http);
    }
 
   

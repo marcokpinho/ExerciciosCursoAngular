@@ -15,9 +15,9 @@ export class DashboardComponent implements OnInit {
   listaDisciplina:any[];
 
   constructor(
-    private categoriaService:CursoService,
-    private produtoService:AlunoService,
-    private pedidoService:DisciplinaService
+    private cursoService:CursoService,
+    private alunoService:AlunoService,
+    private disciplinaService:DisciplinaService
     ) { }
 
   ngOnInit() {
@@ -25,13 +25,13 @@ export class DashboardComponent implements OnInit {
   }
 
   atualiza(){
-    this.categoriaService.getAll().then(response=>{
+    this.cursoService.getAll().then(response=>{
       this.listaCurso=response.values;
     });
-    this.produtoService.getAll().then(response=>{
+    this.alunoService.getAll().then(response=>{
       this.listaAluno=response.values;
     });
-    this.pedidoService.getAll().then(response=>{
+    this.disciplinaService.getAll().then(response=>{
       this.listaDisciplina=response.values;
     });
 
