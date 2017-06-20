@@ -16,7 +16,7 @@ import { SuperDetalhes } from '../../comum/superdetalhes.component';
 export class DetalhesComponent extends SuperDetalhes implements OnInit {
 
   alunos = [];
-  selecionado = {itens:[]};
+  selecionado = {alunos:[]};
   aluno;
 
   constructor(service: DisciplinaService, router: Router, route: ActivatedRoute, private alunoService: AlunoService) {
@@ -24,15 +24,15 @@ export class DetalhesComponent extends SuperDetalhes implements OnInit {
   }
 
   inserirAluno(){ 
-    if (!this.selecionado.itens) {
-      this.selecionado.itens = [];
+    if (!this.selecionado.alunos) {
+      this.selecionado.alunos = [];
     }
-    let antigo = this.selecionado.itens;
-    this.selecionado.itens = [];
+    let antigo = this.selecionado.alunos;
+    this.selecionado.alunos = [];
     for (let i = 0; i < antigo.length; i++) {
-      this.selecionado.itens.push(antigo[i]);
+      this.selecionado.alunos.push(antigo[i]);
     } 
-    this.selecionado.itens.push(this.aluno); 
+    this.selecionado.alunos.push(this.aluno); 
     this.aluno = null;
    }
 
